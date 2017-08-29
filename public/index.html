@@ -28,10 +28,16 @@
 <body ng-app="myApp" ng-controller="RandomController as vm">
     <h1>Giphy</h1>
     <p><button ng-click="vm.getRandom()">RANDOM</button></p>
+        <label for="search">Search</label>
+        <input type="text" ng-model="vm.search" id="search">
+        <button ng-click="vm.searchGif(vm.search)">Search</button>
     <div>
         <img ng-src="{{vm.displayGif}}">
     </div>
-
+    <!-- <div>
+        <img ng-src="{{vm.searchGif}}">
+    </div>
+{{vm.searchGif}} -->
 </body>
 
 </html>

@@ -48,6 +48,7 @@ app.controller('RandomController', ['$http', function($http) {
     var giphyAPIKey = '79064bbf6d1449a69eb0d81af8e89d17';   // your API Key
 
     self.singleGif = {list:[]};
+    // self.searchGif = {list:[]};
 
     self.getRandom = function() {
         // example request:
@@ -68,5 +69,15 @@ app.controller('RandomController', ['$http', function($http) {
         });
     };
 
-    
+    // self.searchGif = function(search) {
+    //     var baseUrl = 'http://api.giphy.com/v1/gifs/search?';
+    //     baseUrl += 'api_key=' + giphyAPIKey;    // api key
+    //     baseUrl += '&q=' + search;
+    //     console.log(search);
+    //     $http.get(baseUrl).then(function(response) {
+    //         self.searchGif.list = response.data;
+
+    //     })
+    // };
+
 }]);
